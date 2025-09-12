@@ -8,6 +8,7 @@ import HomePage from './Components/HomePage'
 import InfoPage from './Components/InfoPage'
 import AboutPage from './Components/AboutPage'
 import ContactPage from './Components/ContactPage'
+import LoginPage from './Routers/LoginPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
       <Route path='/info' element={<InfoPage />} />
       <Route path='/about' element={<AboutPage />} />
       <Route path='/contact' element={<ContactPage />} />
+      <Route path='/login' element={<LoginPage />} />
     </Routes>
     </BrowserRouter>
 
