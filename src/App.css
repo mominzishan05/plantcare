@@ -1,0 +1,213 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+/* ========== Plant Section (Intro) ========== */
+.plant-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 10%;
+  background: #f1f8e9;
+  border-radius: 15px;
+  margin: 30px auto;
+  animation: fadeIn 1.5s ease;
+}
+
+.plant-text {
+  flex: 1;
+}
+.plant-text h2 {
+  font-size: 2.2rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+.plant-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.learn-btn {
+  padding: 10px 20px;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.learn-btn:hover {
+  background: #1b5e20;
+}
+.plant-image {
+  flex: 1;
+  text-align: center;
+}
+.plant-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+.plant-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== Benefits Section ========== */
+.benefits {
+  text-align: center;
+  padding: 60px 20px;
+  background: #e8f5e9;
+  margin: 30px auto;
+  border-radius: 12px;
+}
+.benefits h2 {
+  color: #2e7d32;
+  margin-bottom: 40px;
+}
+.benefit-cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card h3 {
+  color: #388e3c;
+  margin: 15px 0 10px;
+}
+.card p {
+  color: #555;
+}
+
+/* ========== Tips Section ========== */
+.tips {
+  padding: 50px 20px;
+  margin: 30px auto;
+  background: #f9fff9;
+  border-radius: 12px;
+}
+.tips h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+.tips ul {
+  max-width: 600px;
+  margin: auto;
+  list-style: none;
+  padding: 0;
+}
+.tips li {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #444;
+  background: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ========== Call to Action ========== */
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #388e3c, #1b5e20);
+  color: #fff;
+  border-radius: 12px;
+  margin: 30px auto;
+}
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.cta p {
+  margin-bottom: 20px;
+}
+.cta-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #a5d6a7;
+  color: #1b5e20;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #fff;
+  color: #2e7d32;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plant-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .benefit-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

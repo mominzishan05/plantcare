@@ -1,0 +1,110 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.aboutpage {
+  font-family: "Poppins", sans-serif;
+  background: #f5fff5;
+  color: #2e4e3f;
+  padding: 20px;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(rgba(0, 100, 0, 0.5), rgba(0, 100, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470")
+      no-repeat center/cover;
+  border-radius: 20px;
+  color: #fff;
+  animation: fadeIn 2s ease;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.about-hero span {
+  color: #9be88d;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+/* Content Section */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #388e3c;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeUp 1.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+}
