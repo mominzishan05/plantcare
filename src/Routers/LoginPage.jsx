@@ -11,12 +11,12 @@ const LoginPage = () => {
         <form className="login-form">
           <div className="form-group">
             <label>Email</label>
-            <input type="email" placeholder="Enter your email" required />
+            <input type="email" placeholder="Enter your email"  />
           </div>
 
           <div className="form-group">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required />
+            <input type="password" placeholder="Enter your password"  />
           </div>
 
           <button type="submit" className="login-btn">

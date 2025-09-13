@@ -15,8 +15,8 @@
 /* Hero Section */
 .info-hero {
   text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(rgba(0, 100, 0, 0.5), rgba(0, 100, 0, 0.5)),
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0, 100, 0, 0.6), rgba(0, 100, 0, 0.6)),
     url("https://images.unsplash.com/photo-1501785888041-af3ef285b470")
       no-repeat center/cover;
   border-radius: 20px;
@@ -25,7 +25,7 @@
 }
 
 .info-hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 15px;
 }
 
@@ -34,14 +34,14 @@
 }
 
 .info-hero p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
-/* Info Cards Section */
+/* Info Cards */
 .info-cards {
   margin: 60px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* ✅ Always 4 cards per row */
   gap: 25px;
 }
 
@@ -69,6 +69,63 @@
   margin-bottom: 10px;
 }
 
+/* Plant Section */
+.plant-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.plant-section h2 {
+  margin-bottom: 30px;
+  color: #2e7d32;
+  font-size: 2rem;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ Always 4 cards per row */
+  gap: 25px;
+}
+
+.plant-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.plant-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.plant-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.plant-card:hover img {
+  transform: scale(1.1);
+}
+
+.plant-card h3 {
+  color: #388e3c;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.plant-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
@@ -80,9 +137,21 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Fix */
+@media (max-width: 1024px) {
   .info-hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+  .plant-card img {
+    height: 150px;
+  }
+  .info-cards, .plant-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ Tablet = 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .info-cards, .plant-grid {
+    grid-template-columns: 1fr; /* ✅ Mobile = 1 card per row */
   }
 }
